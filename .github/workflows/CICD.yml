@@ -1,0 +1,21 @@
+name: CICD
+
+on:
+  push: 
+    branches: [ main ]
+  pull_request: 
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        run: echo "Linting"
+
+  Validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate
+        run: echo "Validating"
